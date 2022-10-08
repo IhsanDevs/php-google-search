@@ -1,0 +1,17 @@
+{
+    "name": "ihsandevs/php-google-search",
+    "description": "Awesome Google Search PHP Wrapper using simple Python binary script ✨",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Ihsandevs\\PhpGoogleSearch\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ihsan Devs",
+            "email": "contact@ihsandevs.com"
+        }
+    ],
+    "require": {}
+}

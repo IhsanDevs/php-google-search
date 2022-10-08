@@ -1,8 +1,8 @@
 <?php 
 
-namespace IhsanDevs;
+namespace Ihsandevs\PhpGoogleSearch;
 
-class GoogleSearch {
+class Search {
     protected static ?string $query;
     protected static ?string $language;
     protected static ?int $total_results;
@@ -32,7 +32,7 @@ class GoogleSearch {
      * 
      * Will return an array of results
      */
-    public function search(): array
+    public function getResults(): array
     {
         $query = self::$query;
         $language = self::$language;
@@ -42,7 +42,7 @@ class GoogleSearch {
          * executable file
          *
          */
-        $google_search = shell_exec("./dist/google-search '$query' -l '$language' -n $total_results --json");
+        $google_search = shell_exec(__DIR__ . "/dist/google-search '$query' -l '$language' -n $total_results --json");
         $google_search = json_decode($google_search, true);
 
         return $google_search;
